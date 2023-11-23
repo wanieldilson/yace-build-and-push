@@ -1,0 +1,21 @@
+apiVersion: v1alpha1
+sts-region: eu-west-2
+discovery:
+  jobs:
+    - type: AWS/ECS
+      regions: [eu-west-2]
+      period: 300
+      length: 300
+      metrics:
+        - name: CPUReservation
+          statistics:
+            - Average
+        - name: MemoryReservation
+          statistics:
+            - Average
+        - name: CPUUtilization
+          statistics:
+            - Average
+        - name: MemoryUtilization
+          statistics:
+            - Average
